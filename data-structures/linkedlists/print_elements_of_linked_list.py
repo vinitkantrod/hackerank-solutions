@@ -1,3 +1,5 @@
+from insert_node_at_tail_of_linked_list import Insert
+
 class Node():
     def __init__(self,data):
         self.data = data
@@ -28,6 +30,7 @@ def createLinkedList(array_data, llist):
         new_list.next = temp
         new_list = new_list.next
 
+
 if __name__ == "__main__":
     n = input()
     finalData = []
@@ -42,7 +45,9 @@ if __name__ == "__main__":
             if len(new_data) > 0:
                 llist = LinkedList()
                 createLinkedList(new_data, llist)
-                printLLInNormal(finalData, llist.head)
+                # printLLInNormal(finalData, llist.head)
+                sh = Insert(llist.head, 100)
+                printLLInNormal(finalData, sh)
     
     for i in finalData:
         print(i)
